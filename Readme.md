@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Illia](https://up.htmlacademy.ru/htmlcss/27/user/1259961).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Горбачев](https://htmlacademy.ru/profile/id92028).
 
 ---
 
