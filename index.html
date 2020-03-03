@@ -36,7 +36,7 @@
               </div>
             </li>
             <li class="enter-menu"><button type="button" title="Вход" class="enter">Вход</button>
-              <form class="sub-menu-enter">
+              <form class="sub-menu-enter" action="https://echo.htmlacademy.ru" method="POST">
                 <input type="text" placeholder="email@example.com">
                 <input type="text" placeholder="••••••••">
                 <div class="sub-menu-enter-wrap">
@@ -66,7 +66,6 @@
           <input class="visually-hidden" type="radio" id="product-3" name="toggle">
           <div class="site-wrapper">
             <div class="container">
-              <div class="main-header"></header>
               <section class="slider">
                 <div class="slider-controls">
                   <label for="product-1">Первый</label>
@@ -111,9 +110,9 @@
               <button type="button" title="Даешь шоколадки!" class="red-button">Хочу шоколадки!</button>
             </article>
         </section>
-        <section class="catalog main">
+        <section class="catalog-main">
           <h3 class="visually-hidden">Популярные товары</h3>
-          <ul>
+          <ul class="catalog-items">
             <li class="catalog-item">
               <div class="catalog-item-wrap">
                 <img src="img/HIT.png" class="hit" alt="Хит" height="61" width="61">
@@ -124,7 +123,9 @@
                   <span class="item-title">джемом и цитрусовой стружкой</span>
                 </h3>
               </div>
+              <div class="background-wrap">
                 <button type="button" class="hidden-button red-button">Быстрый просмотр</button>
+              </div>
             </li>
             <li class="catalog-item">
               <div class="catalog-item-wrap">
@@ -136,7 +137,9 @@
                   <span class="item-title">шоколада</span>
                 </h3>
               </div>
+              <div class="background-wrap">
                 <button type="button" class="hidden-button red-button">Быстрый просмотр</button>
+              </div>
             </li>
             <li class="catalog-item">
               <div class="catalog-item-wrap">
@@ -148,7 +151,9 @@
                 <span class="item-title"> присыпкой из белого шоколада</span>
                 </h3>
               </div>
+              <div class="background-wrap">
                 <button type="button" class="hidden-button red-button">Быстрый просмотр</button>
+              </div>
             </li>
             <li class="catalog-item">
               <div class="catalog-item-wrap">
@@ -160,7 +165,9 @@
                   <span class="item-title">карамельной подливкой</span>
                 </h3>
               </div>
+              <div class="background-wrap">
                 <button type="button" class="hidden-button red-button">Быстрый просмотр</button>
+              </div>
             </li>
           </ul>
         </section>
@@ -168,16 +175,16 @@
           <h2>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
           <ul>
             <li>
-              <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+              <p class="about-icecream">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
             </li>
             <li>
-              <p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+              <p class="about-farm">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
             </li>
             <li>
-              <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+              <p class="about-milk">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
             </li>
             <li>
-              <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+              <p class="about-pack">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
             </li>
           </ul>
         </section>
@@ -187,12 +194,12 @@
             <p><a href="#">10 способов сервировки фруктовых щербетов к столу</a></p>
           </article>
           <article class="mailing">
-            <form class="mailing-form">
+            <form class="mailing-form" action="https://echo.htmlacademy.ru" method="POST">
               <h3 class="visually-hidden">Подписка на сладкую рассылку</h3>
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <div class="mailing-wrap">
                 <input type="text" placeholder="email@example.com">
-                <button type="button" class="red-button send">Отправить</button>
+                <button type="submit" class="red-button send">Отправить</button>
               </div>
             </form>
           </article>
