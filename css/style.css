@@ -448,7 +448,6 @@ input[type="radio"].visually-hidden {
     background-color: #8996a6;
     background-image: url("../img/Chocolate-plombir-Slider.png");
 }
-
 #product-3:checked ~ .site-wrapper {
     background-color: #9d8b84;
     background-image: url("../img/Strawberry-plombir-Slider.png");
