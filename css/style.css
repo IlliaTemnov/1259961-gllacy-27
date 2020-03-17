@@ -266,7 +266,9 @@ input[type='radio'].visually-hidden {
     display: block;
     color: #ffffff;
     font-weight: bold;
-    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+    line-height: 16px;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2); 
+    /* text-transform: underline; */
     text-align: center;
     color:#ffffff;
     box-sizing: border-box;
@@ -291,9 +293,9 @@ input[type='radio'].visually-hidden {
     color: #ffffff;
     border-radius: 50px;
     text-align: center;
-    padding: 5px 14px;
+    padding: 8px 14px;
     left: -14px;
-    top: -5px;
+    top: -8px;
 }
 .first.main::before {
     content: 'Каталог';
@@ -305,9 +307,9 @@ input[type='radio'].visually-hidden {
     color: #323232;
     border-radius: 50px;
     text-align: center;
-    padding: 5px 14px;
+    padding: 8px 14px;
     left: -14px;
-    top: -5px;
+    top: -8px;
 }
 .first.main::after {
     display: block;
@@ -342,9 +344,9 @@ input[type='radio'].visually-hidden {
     color: #333333;
     border-radius: 50px;
     text-align: center;
-    padding: 5px 14px;
+    padding: 8px 14px;
     left: -14px;
-    top: -5px;  
+    top: -8px;  
 }
 .menu-title.third {
     position: relative;
@@ -360,9 +362,9 @@ input[type='radio'].visually-hidden {
     color: #333333;
     border-radius: 50px;
     text-align: center;
-    padding: 5px 14px;
+    padding: 8px 14px;
     left: -14px;
-    top: -5px;  
+    top: -8px;  
 }
 .menu-title.second:hover::before, .menu-title.second:focus::before {
     display: inline-block;  
@@ -398,7 +400,7 @@ input[type='radio'].visually-hidden {
     border-radius: 50px;
     color:#ffffff;
 }
-.enter:hover {
+.enter:hover, .enter:focus {
     background-color: #f8f7f4; 
     color: #323232;
 }
