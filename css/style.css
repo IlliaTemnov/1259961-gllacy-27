@@ -12,7 +12,6 @@ body {
 .main-container {
     margin: 0 auto;
     position: relative;
-    width: 1146px;
 }
 a {
     text-decoration: none;
@@ -100,11 +99,10 @@ input[type='radio'].visually-hidden {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-end;
     position: absolute;
-    z-index: 2;
     margin: auto;
-    width: 100%;
+    z-index: 2;
+    width: 1146px;
 }
 .main-header.catalog {
     display: flex;
@@ -246,7 +244,7 @@ input[type='radio'].visually-hidden {
     min-height: 175px;
     margin: 0;
     padding: 0;
-    top: 30px;
+    top: 28px;
     list-style: none;
     background-color: #f8f7f4;
     border-radius: 5px;
@@ -259,7 +257,10 @@ input[type='radio'].visually-hidden {
     background-color: black;
     display: block;
 }
-.nav-list > li:hover .sub-menu {
+ .nav-list > li:hover .sub-menu {
+    display: block;
+}
+.menu-title:hover + ul, .menu-title:focus + ul{
     display: block;
 }
 .menu-title {
@@ -268,7 +269,6 @@ input[type='radio'].visually-hidden {
     font-weight: bold;
     line-height: 16px;
     border-bottom: 1px solid rgb(255, 255, 255, 0.2); 
-    /* text-transform: underline; */
     text-align: center;
     color:#ffffff;
     box-sizing: border-box;
@@ -315,16 +315,17 @@ input[type='radio'].visually-hidden {
     display: block;
     content: '';
     width: 70px;
-    height: 5px;
-    bottom: -8px;
+    height: 7px;
+    bottom: -15px;
     position: absolute;
+
 }
 .first.catalog::after {
     display: block;
     content: '';
     width: 60px;
-    height: 5px;
-    bottom: -8px;
+    height: 7px;
+    bottom: -14px;
     position: absolute;
 }
 .first.main:hover::before, .first.main:focus::before {
@@ -380,7 +381,6 @@ input[type='radio'].visually-hidden {
 .menu-title.third:active::before {
     box-shadow: inset 0px 2px 1px 0 #696969;
 }
-
 .enter {
     position: relative;
     text-decoration: none;
@@ -403,20 +403,21 @@ input[type='radio'].visually-hidden {
 .enter:hover, .enter:focus {
     background-color: #f8f7f4; 
     color: #323232;
+    outline: none;
 }
 .enter svg {
     position: absolute;
     left: 15px;
     top: 6px;
 }
-.enter:hover path {
+.enter:hover path, .enter:focus path  {
     fill: #323232;
 }
 .enter-menu {
     position: relative;
     margin-right: 8px;
 }
-.enter-menu:hover .sub-menu-enter{
+.enter:hover +.sub-menu-enter, .enter:focus +.sub-menu-enter{
     display: block;
 }
 .sub-menu-enter {
@@ -467,8 +468,8 @@ input[type='radio'].visually-hidden {
     position: relative;
     margin-right: 8px;
 }
-.search-menu:hover .search, .search-menu:focus .search {
-    display: flex;
+.search-button:hover +.search, .search-button:focus +.search {
+    display: flex; 
 }
 .search-button {
     position: relative;
@@ -484,6 +485,7 @@ input[type='radio'].visually-hidden {
 }
 .search-button:hover, .search-button:focus {
     background-color: #f8f7f4;
+    outline: none;
 }
 .search-button:hover path, .search-button:focus path{
     fill: #323232;
@@ -553,7 +555,7 @@ input[type='radio'].visually-hidden {
     font-size: 14px;
     padding-left: 25px;
 }
-.basket-button.catalog{
+.basket-button.catalog {
     width: 117px;
     height: 33px;
     padding: 0;
@@ -588,18 +590,22 @@ input[type='radio'].visually-hidden {
     left: 15px;
     top: 7px;
 }
-.basket-button.main:hover {
+.basket-button.main:hover,
+.basket-button.main:focus {
+    outline: none;
     background-color: #f8f7f4;
     color: #323232;
 }
-.basket-button.main:hover path{
+.basket-button.main:hover path, 
+.basket-button.main:focus path{
     fill: #323232;
 }
-.basket-button.main:hover circle{
+.basket-button.main:hover circle,
+.basket-button.main:focus circle{
     fill: #323232;
 }
-.basket-button.main:hover 
-.slider-section {
+.basket-button.main:hover .slider-section,
+.basket-button.main:focus .slider-section{
     margin-top: auto;
 }
 .basket-button.main:before {
@@ -629,7 +635,11 @@ input[type='radio'].visually-hidden {
     display: none;
     z-index: 2;
 }
-.basket-menu:hover .dropdown-content-basket{
+.basket-button.catalog:hover, .basket-button.catalog:focus {
+    outline: none;
+}
+.basket-button.catalog:hover +.dropdown-content-basket,
+.basket-button.catalog:focus +.dropdown-content-basket{
     display: block;
 }
 .dropdown-content-basket svg{
@@ -755,15 +765,16 @@ table {
     background-color: #849d8f;
     background-image: url('../img/cream-brule-slider.png');
     background-repeat: no-repeat;
-
 }
 #product-2:checked ~ .site-wrapper {
     background-color: #8996a6;
     background-image: url('../img/chocolate-plombir-slider.png');
+    background-repeat: no-repeat;
 }
 #product-3:checked ~ .site-wrapper {
     background-color: #9d8b84;
     background-image: url('../img/strawberry-plombir-slider.png');
+    background-repeat: no-repeat;
 }  
 #product-1:checked ~ .site-wrapper #slide1,
 #product-2:checked ~ .site-wrapper #slide2,
@@ -781,7 +792,8 @@ table {
     width: 1146px;
     min-height: 230px;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    
 }
 .promo h2 {
     font-weight: bold;
@@ -842,34 +854,45 @@ table {
     margin-left: auto;
 }
 .catalog-main {
-    width: 1200px;
+    width: 1146px;
     margin: auto;
 }
 .catalog-items {
     margin: 0;
     padding: 0;
-    width: 1200px;
     display: flex;
     align-items: center;
     margin-bottom: 13px;
     flex-wrap: wrap;
+    width: 100%;
+}
+.catalog-items.main {
+    margin-bottom: 35px;
+}
+.main-img {
+    margin-bottom: 12px;
 }
 .catalog-item {
     display: flex;
     flex-wrap: wrap;
     width: 286px;
+    justify-content: center;
     text-align: center;
     position: relative;
     margin: 0;
-    margin-bottom: 22px;
-    margin-top: 20px;
 }
-.catalog-item.last-in-row {
-    margin-right: 43px;
-}
-.hit {
+.catalog-item.main::before {
+    content:'';
     position: absolute;
-    z-index: 1;
+    display: block;
+    width: 61px;
+    height: 61px;
+    background-image: url( ../img/hit.png);
+    left: 10px;
+    z-index: 4;
+}
+.catalog-item.first-in-row {
+    align-self: flex-start;
 }
 .catalog-item h3 {
     margin: 0;
@@ -885,9 +908,9 @@ table {
     display: inline-block;
     color: #ffffff;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 15px;
     font-weight: 500;
-    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2); 
     text-align: center;
     z-index: 3;
 }
@@ -906,7 +929,7 @@ table {
     font-weight: bold;
     text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
     z-index: 2;
-    bottom: 67px;
+    bottom: 57px;
     left: 7px;
 }
 .catalog-item button{
@@ -917,22 +940,19 @@ table {
     bottom: 18px;
     left: 40px;
 }
-.catalog-item:hover button {
+.catalog-item:hover button, .catalog-item:focus button {
     display: block;
 }
-.catalog-item:hover .background-wrap{
+.catalog-item:hover .background-wrap, .catalog-item:focus .background-wrap{
     display: block;
     background-color: rgba(225, 225, 225, .2);
 }
-.catalog-item img{
+/* .catalog-item img{
     margin-left: 10px;
     margin-bottom: 10px;
-}
+} */
 .catalog-item:hover img, .catalog-item:focus img{
     z-index: 3;
-}
-.catalog-item:hover .hit, .catalog-item:focus .hit{
-    z-index: 4;
 }
 .catalog-item:hover .price, .catalog-item:focus .price {
     z-index: 4;
@@ -1270,7 +1290,11 @@ table {
     border-radius: 50%;
     margin-right: 11px;
 }
-.social-link:hover path {
+.social-link:focus {
+    outline: none;
+}
+.social-link:hover path,
+.social-link:focus path {
     fill: rgba(255, 255, 255, 0.8);
 }
 .social-link:active path {
@@ -1301,12 +1325,15 @@ table {
     line-height: 18px;
     color: #fefefe;
 }
-.main-footer a:hover,
+.main-footer a:hover, .main-footer a:focus,
 .main-footer a:active {
     color: #ffbc9e;
 }
 .footer-logo {
     margin-left: 15px;
+}
+.footer-logo:focus path,.footer-logo:hover path{
+    fill: #ffbc9e;
 }
 .breadscrumbs {
     display: flex;
@@ -1315,6 +1342,7 @@ table {
     padding: 0;
     margin: 0;
     font-size: 14px;
+    z-index: 1;
 }
 .breadscrumbs  li:not(:first-child) {
     position: relative;
@@ -1326,7 +1354,7 @@ table {
     border-bottom: 1px solid rgb(255, 255, 255, 0.2);
     color: #ffffff;
 }
-.breadscrumbs a:hover,
+.breadscrumbs a:hover, .breadscrumbs a:focus,
 .breadscrumbs a:active {
     color: #ffbc9e;
     border-bottom: 1px solid rgb(255, 188, 158, 0.2);
@@ -1365,10 +1393,10 @@ main h1 {
     display: none; /* remove default arrow in IE 11 */
     }
 
-.filter-sort:hover .sort{
+.filter-sort:hover .sort, .filter-sort:focus .sort{
     color: #323232;
 }
-.filter-sort:hover .down-dir{
+.filter-sort:hover .down-dir, .filter-sort:focus .down-dir{
     background-image: url(../img/icon-down-dir-black.png);
     background-repeat: no-repeat;
     color: #323232;
@@ -1445,7 +1473,7 @@ main h1 {
     box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
     cursor: pointer;
 }
-.range-toggle:hover {
+.range-toggle:hover, .range-toggle:focus {
     background: #1c4f80;
     transform: scale(1.1,1.1);
 }
@@ -1513,10 +1541,15 @@ main h1 {
     background-image: url(../img/radio-on.png); 
     opacity: 0.8;
 }
-label:hover .check-box {
-    opacity: 1;   
+label:hover .check-box,
+label:focus .check-box  {
+    opacity: 1; 
 }
-label:hover .check-input:checked + .check-box{
+label:focus .check-box  {
+    outline: 1px solid blue; 
+}
+label:hover .check-input:checked + .check-box,
+label:focus .check-input:checked + .check-box {
     background-image: url(../img/radio-on.png); 
     opacity: 1;
 }
@@ -1574,10 +1607,12 @@ label:hover .check-input:checked + .check-box{
     background-image: url(../img/checkbox-on.png); 
     opacity: 0.8;
 }
-.check:hover, label:focus .check-box-fillers {
+.check:hover .check-box-fillers,
+.check:focus .check-box-fillers {
     opacity: 1;   
 }
-.check:hover .check-input-fillers:checked + .check-box-fillers {
+.check:hover .check-input-fillers:checked + .check-box-fillers, 
+.check:focus .check-input-fillers:checked + .check-box-fillers  {
     background-image: url(../img/checkbox-on.png); 
     opacity: 1;
 }
@@ -1599,7 +1634,7 @@ label:hover .check-input:checked + .check-box{
     cursor: pointer;
     align-self: flex-end;
 }
-.filter-button:hover {
+.filter-button:hover, .filter-button:focus {
     background-color: #ffffff;
     color: #323232;
 }
@@ -1682,7 +1717,7 @@ label:hover .check-input:checked + .check-box{
     color: black;
     z-index: 2;
 }
-.pagination-item a:hover:after {
+.pagination-item a:hover:after, .pagination-item a:focus:after {
     display: block;
     z-index: 1;
 }
@@ -1714,7 +1749,7 @@ label:hover .check-input:checked + .check-box{
    width: 478px;
    min-height: 443px;
    display: flex;
-   display: none;
+   display: none; 
    flex-direction: column;
    justify-content: space-between;
    position: absolute;
