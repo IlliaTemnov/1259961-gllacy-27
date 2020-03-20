@@ -503,6 +503,7 @@ img {
 .enter-menu {
     position: relative;
     margin-right: 8px;
+    z-index: 3;
 }
 
 .enter:hover+.sub-menu-enter,
@@ -567,13 +568,13 @@ img {
 .search-menu {
     position: relative;
     margin-right: 8px;
-    z-index: 1;
+    z-index: 3;
 }
 
 .search-button:hover+div,
 .search-button:focus+div {
     display: flex;
-    z-index: 2;
+    z-index: 3;
 }
 
 .search-button {
@@ -1054,8 +1055,8 @@ table {
     margin-bottom: 40px;
 }
 
-.catalog-item.catalog img {
-    vertical-align: top;
+.catalog-item img {
+    vertical-align: middle;
 }
 
 .catalog-items.main {
@@ -1137,8 +1138,9 @@ table {
     font-weight: bold;
     text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
     z-index: 2;
-    bottom: 66px;
-    left: 7px;
+    bottom: 61px;
+    left: 9px;
+    letter-spacing: -0.7px;
 }
 
 .background-wrap a {
@@ -1960,19 +1962,8 @@ label:focus .check-input:checked+.check-box {
     box-sizing: border-box;
     height: 135px;
     width: 860px;
-    margin-bottom: 40px;
+    margin-bottom: 37px;
     padding-bottom: 3px;
-}
-
-.main-footer.catalog::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 1146px;
-    height: 1px;
-    opacity: 0.3;
-    background-color: #ffffff;
 }
 
 .pagination-list {
@@ -1987,8 +1978,20 @@ label:focus .check-input:checked+.check-box {
     font-size: 16px;
     line-height: 18px;
     margin-top: 48px;
-    margin-bottom: 32px;
+    margin-bottom: 36px;
     margin-right: 5px;
+}
+
+.pagination-list::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    width: 1146px;
+    height: 1px;
+    opacity: 0.3;
+    background-color: #ffffff;
 }
 
 .pagination-item {
