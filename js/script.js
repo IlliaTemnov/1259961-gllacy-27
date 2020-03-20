@@ -7,7 +7,7 @@ function initMap() {
   // The marker, positioned at Office
   var marker = new google.maps.Marker({
     position: office, map: map,
-    icon: './img/pin-and-shadow.png'
+    icon: '../img/pin-and-shadow.png'
   });
 }
 
